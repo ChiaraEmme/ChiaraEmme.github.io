@@ -1,49 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>ChiaraEmme</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mumford and Sons</title>
     <style>
       body {
-        background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to top, #233142 0%, #96aecc 100%);
       }
       h1 {
         text-align: center;
-        color: orange;
+        color: #455d7a;
+        font-size: 40px;
       }
-      div {
+      h2 {
         text-align: center;
+        color: #f95959;
+        border: 1px solid #455d7a;
+        padding: 15px;
+        border-radius: 5px;
       }
-      a {
-        text-align: center;
+      img {
         display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
       }
-      .presentation {
-        color: #ff6f3c;
+      p {
+        line-height: 1.5;
+        font-size: 15px;
+        color: #bfb5b5;
+        margin: 20px 0 10px;
+      }
+      .band-member {
+        color: #f95959;
+        text-decoration: none;
+      }
+      .band-member:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background-color: #f95959;
+        color: #bfb5b5;
+        border: none;
+        border-radius: 4px;
+        padding: 15px 20px;
+        font-size: large;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: #fff;
+        color: #f95959;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+      .learn-more {
+        margin-top: 10px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
         text-align: center;
       }
-      .images {
-        color: #ff9a3c;
-        text-align: center;
+      .my-name {
+        color: #455d7a;
+        text-decoration: none;
+      }
+      .my-name:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <h1>Chiara Emme</h1>
-    <hr />
-    <p class="presentation">Hi, my name is Chiara.</p>
-    <a
-      href="https://www.facebook.com/chiara.migliori.3/"
-      target="_blank;"
-      style="text-align: center"
-      >This is my Facebook page</a
-    >
-    <p class="images">And this is a picture of me!</p>
-    <div>
+    <div class="container">
+      <h1>I love music! 🎧</h1>
+      <h2>Especially Mumford and Sons</h2>
+
       <img
-        src="https://scontent.ftrn3-2.fna.fbcdn.net/v/t1.6435-9/164996897_10225548654003444_3132497892984228335_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=doGB1KO9hDoAX-S9prP&_nc_ht=scontent.ftrn3-2.fna&oh=00_AfDPB5T12peD0HJwrmMdGnNU6WudwgIz8agGH4_xwQReKQ&oe=6440E8B8"
-        alt="Chiara with sunglasses"
-        width="350"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/384/original/8256.jpg?1680703867"
+        alt="Mumford and Sons"
       />
+
+      <hr />
+      <p>
+        Mumford & Sons is a British folk rock band formed in London in 2007. The
+        band currently consists of
+        <span
+          ><a
+            href="https://en.wikipedia.org/wiki/Marcus_Mumford"
+            target="_blank"
+            class="band-member"
+            >Marcus Mumford</a
+          ></span
+        >
+        (lead vocals, electric guitar, acoustic guitar, drums),
+        <span
+          ><a
+            href="https://en.wikipedia.org/wiki/Ted_Dwane"
+            target="_blank"
+            class="band-member"
+            >Ted Dwane</a
+          ></span
+        >
+        (vocals, bass guitar, double bass), and
+        <span
+          ><a
+            href="https://en.wikipedia.org/wiki/Ben_Lovett_(British_musician)"
+            target="_blank"
+            class="band-member"
+            >Ben Lovett</a
+          ></span
+        >
+        (vocals, keyboards, piano).
+      </p>
+      <hr />
+      <a
+        href="https://en.wikipedia.org/wiki/Mumford_%26_Sons"
+        target="_blank"
+        class="learn-more"
+      >
+        <strong>📖 Learn more on Wikipedia</strong>
+      </a>
+      <button class="buy-tickets">🎵 Buy Tickets!</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/feed/"
+          target="_blank"
+          class="my-name"
+        >
+          <em>Chiara Migliori</em>
+        </a>
+      </p>
     </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let age = prompt("How old are you?");
+
+        if (age >= 14) {
+          alert(
+            "Thank you " +
+              name +
+              "! We'll be in touch by email, meanwhile go listen to some music!"
+          );
+        } else {
+          alert(
+            "Sorry " +
+              name +
+              ", you're still too young to go to concerts by yourself ☹️"
+          );
+        }
+      }
+
+      let buyButton = document.querySelector(".buy-tickets");
+      buyButton.addEventListener("click", buy);
+    </script>
   </body>
 </html>
